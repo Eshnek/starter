@@ -1,0 +1,65 @@
+{
+    "command-runner.terminal.autoClear": true,
+    "command-runner.commands": {
+        "Build": "bash build.sh",
+        "Clean": "bash clean.sh",
+    },
+    "git.ignoredRepositories": [
+    ],
+    "better-comments.tags": [
+        {
+            "tag": "!",
+            "color": "#B44781",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": "?",
+            "color": "#2a85a6",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": ":",
+            "color": "#56a8ee",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "todo",
+            "color": "#e17458",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "**",
+            "color": "#11d484",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "*",
+            "color": "#44cf92",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+    ],
+}

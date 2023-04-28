@@ -1,0 +1,14 @@
+{
+    "recommendations": [
+      "aaron-bond.better-comments",
+      "naumovs.color-highlight",
+
+      "edonet.vscode-command-runner",
+
+      "ms-vscode.cpptools",
+      "jeff-hykin.better-cpp-syntax",
+      "twxs.cmake",
+      "vadimcn.vscode-lldb",
+      "llvm-vs-code-extensions.vscode-clangd",
+    ]
+  }

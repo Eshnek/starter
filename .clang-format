@@ -1,0 +1,105 @@
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+
+BasedOnStyle: LLVM
+IndentWidth: 4
+
+Language: Cpp
+Standard: c++20
+
+DerivePointerAlignment: false
+PointerAlignment: Left
+
+ColumnLimit: 120
+
+UseCRLF: false
+DeriveLineEnding: false
+
+EmptyLineAfterAccessModifier: Always
+FixNamespaceComments: true
+ReflowComments: true
+
+PackConstructorInitializers: Never
+
+# Only works on Javascript - it cannot be used with BinPackArguments
+# InsertTrailingCommas: Wrapped
+BinPackArguments: false
+
+# ExperimentalAutoDetectBinPacking: true
+# Cpp11BracedListStyle: false
+
+IndentPPDirectives: BeforeHash
+
+AlignConsecutiveMacros: Consecutive
+AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveDeclarations: Consecutive
+AlignEscapedNewlines: Left
+AlignOperands: Align
+AlignTrailingComments: true
+
+AlignAfterOpenBracket: BlockIndent
+
+AllowShortLambdasOnASingleLine: Empty
+AllowShortBlocksOnASingleLine: Never
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AllowAllArgumentsOnNextLine: false
+AllowAllParametersOfDeclarationOnNextLine: false
+BraceWrapping:
+  AfterClass: true
+  AfterStruct: true
+  AfterUnion: true
+  AfterExternBlock: true
+  AfterCaseLabel: true
+  AfterControlStatement: Always
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
+  BeforeCatch: true
+  BeforeElse: true
+  BeforeLambdaBody: true
+  BeforeWhile: true
+  IndentBraces: false
+  SplitEmptyFunction: true
+  SplitEmptyRecord: true
+  SplitEmptyNamespace: true
+
+BreakBeforeBraces: Custom
+
+CompactNamespaces: false
+SortUsingDeclarations: true
+Cpp11BracedListStyle: true
+SortIncludes: CaseSensitive
+
+SpaceBeforeCpp11BracedList: true
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceAfterCStyleCast: true
+SpaceAfterLogicalNot: false
+SpaceAfterTemplateKeyword: false
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCaseColon: false
+SpaceBeforeParens: Always
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceBeforeSquareBrackets: false
+SpaceInEmptyBlock: false
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 1
+SpacesInAngles: Always
+SpacesInCStyleCastParentheses: false
+SpacesInConditionalStatement: true
+SpacesInContainerLiterals: true
+SpacesInParentheses: true
+SpacesInSquareBrackets: true
+
+AlwaysBreakTemplateDeclarations: Yes
+
+AccessModifierOffset: 0
+
+WhitespaceSensitiveMacros: ['STRINGIZE']
+
+## QualifierAlignment: Custom
+## QualifierOrder: ['static', 'inline', 'const', 'volatile', 'type']

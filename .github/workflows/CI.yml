@@ -1,0 +1,47 @@
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+
+  test:
+
+    strategy:
+      fail-fast: true
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+          # token: ${{ secrets.pat }} # Needed if cloning private repositories
+
+      - name: 'Binary: ninja'
+        run: |
+          git clone https://github.com/ninja-build/ninja.git ninja
+          cd ninja
+          git checkout release
+          ./configure.py --bootstrap
+
+      - name: Build
+        if: ${{ runner.os == 'Windows' }}
+        run: |
+          set PATH="%PATH%;$(pwd)/ninja"
+
+          bash build.sh
+      - name: Build
+        if: ${{ runner.os != 'Windows' }}
+        run: |
+          export PATH="$(pwd)/ninja:$PATH"
+
+          bash build.sh
+
+      - name: Test
+        run: |
+          bash run.sh ci
